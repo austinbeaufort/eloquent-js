@@ -1,0 +1,12 @@
+body{
+    background-image: url('https://i.ytimg.com/vi/DYHi5HM7ovU/maxresdefault.jpg');
+}
+
+.container {
+    text-align: center;
+    width: 3px;
+    margin: auto;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
