@@ -80,39 +80,104 @@
 
 
 // BROWSER SOLUTION!
-let fizzy = document.querySelector('.fizzy');
-let fizzDoc = '';
+// let fizzy = document.querySelector('.fizzy');
+// let fizzDoc = '';
 
 
-for(let i = 1; i <= 100; i++) {
-    if(i % 3 == 0 && i % 5 == 0) {
-        fizzDoc += `<img src="https://i.ibb.co/VWMGVVt/FIZZBUZZ.png" width="150px" alt="FIZZBUZZ" border="0">
-        ` ;
-    } else if(i % 3 == 0) {
-        fizzDoc += `<img src="https://i.ibb.co/dMTxX8H/COKE.png" width="40px" alt="COKE" border="0">
-        `;
-    } else if(i % 5 == 0) {
-        fizzDoc += `<img src="https://i.ibb.co/9vDChWB/BUZZ.png" width="150px" alt="BUZZ" border="0">
-        `;
-    }
-    else {
-        fizzDoc += `${i}
-        `;
-    }
-    fizzy.innerHTML = fizzDoc;
-}
+// for(let i = 1; i <= 100; i++) {
+//     if(i % 3 == 0 && i % 5 == 0) {
+//         fizzDoc += `<img src="https://i.ibb.co/VWMGVVt/FIZZBUZZ.png" width="150px" alt="FIZZBUZZ" border="0">
+//         ` ;
+//     } else if(i % 3 == 0) {
+//         fizzDoc += `<img src="https://i.ibb.co/dMTxX8H/COKE.png" width="40px" alt="COKE" border="0">
+//         `;
+//     } else if(i % 5 == 0) {
+//         fizzDoc += `<img src="https://i.ibb.co/9vDChWB/BUZZ.png" width="150px" alt="BUZZ" border="0">
+//         `;
+//     }
+//     else {
+//         fizzDoc += `${i}
+//         `;
+//     }
+//     fizzy.innerHTML = fizzDoc;
+// }
 
 
-// ALSO SEE IT IN THE CONSOLE!
-for(let i = 1; i <= 100; i++) {
-    if(i % 3 == 0 && i % 5 == 0) {
-        console.log('FizzBuzz');
-    } else if(i % 3 == 0) {
-        console.log('Fizz');
-    } else if(i % 5 == 0) {
-        console.log('Buzz');
+// // ALSO SEE IT IN THE CONSOLE!
+// for(let i = 1; i <= 100; i++) {
+//     if(i % 3 == 0 && i % 5 == 0) {
+//         console.log('FizzBuzz');
+//     } else if(i % 3 == 0) {
+//         console.log('Fizz');
+//     } else if(i % 5 == 0) {
+//         console.log('Buzz');
+//     }
+//     else {
+//         console.log(i);
+//     }
+// }
+
+
+
+
+// EXERCISE CHESSBOARD
+
+// INITIAL CHESSBOARD
+
+// let length = 8;
+
+// for (let i = 0; i < length; i++) {
+//     console.log(` # # # #
+// # # # #`);
+// }
+
+// let length = 8;
+
+// let i = 1;
+// while (i <= length) {
+//     console.log(' # # # #');
+//     if (i == length) break;
+//     i++;
+//     console.log('# # # # ');
+//     if(i == length) break;
+//     i++;
+// }
+
+alert(`let's make some smiling faces
+in the console!`);
+
+
+
+let length = +prompt('How many smiles for length?');
+let width = +prompt('How many smiles for width?');
+let myString = '';
+let secondString = '';
+
+let i = 1;
+let j = 1;
+
+while (i <= length) {
+    //firstline
+    while ( j <= width) {
+        myString = myString + ` :)`;
+        j++;
     }
-    else {
-        console.log(i);
+    console.log(myString);
+    if (i == length) break;
+    i++;
+    //reset values
+    j = 1;
+    myString = '';
+
+    //secondline
+    while ( j <= width) {
+        secondString = secondString + ':) ';
+        j++;
     }
+    console.log(secondString);
+    if(i == length) break;
+    i++;
+    //reset values
+    j = 1;
+    secondString = '';
 }
