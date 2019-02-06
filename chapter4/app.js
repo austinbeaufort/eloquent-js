@@ -191,44 +191,60 @@
 
 // EXERCISE: A LIST
 
-let arrayToList = arr => {
-    let list = null;
-    for (let i = arr.length; i >= 1; i--) {
-        list = {value: i, rest: list};
-    }
-    return list;
-}
+// let arrayToList = arr => {
+//     let list = null;
+//     for (let i = arr.length - 1; i >= 0; i--) {
+//         list = {value: i, rest: list};
+//     }
+//     return list;
+// }
 
-console.log(arrayToList([1, 2, 3]));
-
-
-let listToArray = list => {
-    let array = [];
-    for (let node = list; node; node = node.rest) {
-        array.push(node.value);
-    }
-    return array;
-}
+// console.log(arrayToList([1, 2, 3]));
 
 
-function prepend(value, list) {
-    return {value, rest: list};
-}
+// let listToArray = list => {
+//     let array = [];
+//     for (let node = list; node; node = node.rest) {
+//         array.push(node.value);
+//     }
+//     return array;
+// }
 
 
-function nth(list, n) {
-    if(!list) return undefined;
-    else if (n == 0) return list.value;
-    else return nth(list.rest, n - 1);
-}
+// function prepend(value, list) {
+//     return {value, rest: list};
+// }
 
-console.log(arrayToList([10, 20]));
-console.log(listToArray(arrayToList([10, 20, 30])));
-console.log(prepend(10, prepend(20, null)));
-console.log(nth(arrayToList([10, 20, 30]), 1));
+
+// function nth(list, n) {
+//     if(!list) return undefined;
+//     else if (n == 0) return list.value[n];
+//     else return nth(list.rest, n - 1);
+// }
+
+// console.log(arrayToList([10, 20]));
+// console.log(listToArray(arrayToList([10, 20, 30])));
+// console.log(prepend(10, prepend(20, null)));
+// console.log(nth(arrayToList([10, 20, 30]), 1));
 
 
 
 
 // EXERCISE: DEEP COMPARISON
 
+
+// let deepEqual = (a, b) => {
+//     if (typeof a == 'object' && typeof b == 'object') {
+//         if(JSON.stringify(a) === JSON.stringify(b)) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     } else if (a !== b) {
+//         return false;
+//     } else {
+//         return true;
+//     }   
+// }
+
+// console.log(deepEqual('cat', 'cat'));
